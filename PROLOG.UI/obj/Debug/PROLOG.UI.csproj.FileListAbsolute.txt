@@ -1,0 +1,8 @@
+C:\Users\Usuario\documents\visual studio 2015\Projects\PROLOG\PROLOG.UI\bin\Debug\PROLOG.UI.exe.config
+C:\Users\Usuario\documents\visual studio 2015\Projects\PROLOG\PROLOG.UI\bin\Debug\PROLOG.UI.exe
+C:\Users\Usuario\documents\visual studio 2015\Projects\PROLOG\PROLOG.UI\bin\Debug\PROLOG.UI.pdb
+C:\Users\Usuario\documents\visual studio 2015\Projects\PROLOG\PROLOG.UI\obj\Debug\PROLOG.UI.Form1.resources
+C:\Users\Usuario\documents\visual studio 2015\Projects\PROLOG\PROLOG.UI\obj\Debug\PROLOG.UI.Properties.Resources.resources
+C:\Users\Usuario\documents\visual studio 2015\Projects\PROLOG\PROLOG.UI\obj\Debug\PROLOG.UI.csproj.GenerateResource.Cache
+C:\Users\Usuario\documents\visual studio 2015\Projects\PROLOG\PROLOG.UI\obj\Debug\PROLOG.UI.exe
+C:\Users\Usuario\documents\visual studio 2015\Projects\PROLOG\PROLOG.UI\obj\Debug\PROLOG.UI.pdb
