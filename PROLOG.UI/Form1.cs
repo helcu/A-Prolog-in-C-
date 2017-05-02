@@ -51,6 +51,8 @@ namespace PROLOG.UI
             puntos.Add(new Point(217, 211));
             puntos.Add(new Point(286, 294));
 
+            comboBox1.SelectedIndex = 0;
+
 
         }
 
@@ -70,6 +72,7 @@ namespace PROLOG.UI
                 listBox1.Items.Add(i["R"].ToString());
                 lista.Add(i["R"].ToString());
             }
+            listBox1.Items.RemoveAt(listBox1.Items.Count - 1);
             string li= lista[0];
             li = li.Substring(1, li.Length - 2);
             List<int> recorrido = new List<int>();
