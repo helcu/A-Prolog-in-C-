@@ -33,7 +33,7 @@ namespace PROLOG.UI
         private void Form1_Load(object sender, EventArgs e)
         {
             
-            Environment.SetEnvironmentVariable("Path", @"D:\\swipl\\bin");
+            Environment.SetEnvironmentVariable("Path", @"C:\\Program Files (x86)\\swipl\\bin");
             string[] p = { "-q", "-f", @"TB1.pl" };
             Environment.SetEnvironmentVariable("SWI_HOME_DIR", @"the_PATH_to_boot32.prc");
             PlEngine.Initialize(p);
