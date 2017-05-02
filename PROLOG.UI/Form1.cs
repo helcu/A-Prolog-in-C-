@@ -13,6 +13,8 @@ namespace PROLOG.UI
 {
     public partial class Form1 : Form
     {
+
+        List<Point> puntos = new List<Point>();
         public Form1()
         {
             InitializeComponent();
@@ -35,53 +37,69 @@ namespace PROLOG.UI
             string[] p = { "-q", "-f", @"TB1.pl" };
             Environment.SetEnvironmentVariable("SWI_HOME_DIR", @"the_PATH_to_boot32.prc");
             PlEngine.Initialize(p);
-            pintarNodos(panel2);
+            panel2.BackgroundImage = Properties.Resources.Captura;
+
+            puntos.Add(new Point(50, 60));
+            puntos.Add(new Point(177, 44));
+            puntos.Add(new Point(135, 135));
+            puntos.Add(new Point(272, 71));
+            puntos.Add(new Point(305, 156));
+            puntos.Add(new Point(448, 127));
+            puntos.Add(new Point(376, 68));
+            puntos.Add(new Point(552, 149));
+            puntos.Add(new Point(47, 255));
+            puntos.Add(new Point(217, 211));
+            puntos.Add(new Point(286, 294));
 
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            listBox1.Items.Clear();
+            panel2.BackgroundImage = Properties.Resources.Captura;
 
-
-
+            panel2.Refresh();
             string salida = (string)comboBox1.SelectedItem;
             PlQuery cargar = new PlQuery("cargar('TB1.bd')");
             cargar.NextSolution();
-
-            PlQuery consulta = new PlQuery("buscarRuta(" + salida + ",'E',R)");
+            List<string> lista = new List<string>();
+            PlQuery consulta = new PlQuery("buscarRuta('" + salida + "','E',R)");
             foreach (PlQueryVariables i in consulta.SolutionVariables)
             {
                 listBox1.Items.Add(i["R"].ToString());
+                lista.Add(i["R"].ToString());
             }
-           
+            string li= lista[0];
+            li = li.Substring(1, li.Length - 2);
+            List<int> recorrido = new List<int>();
+            
+            foreach (String s in li.Split(','))
+            {
+                recorrido.Add(Int32.Parse(s.Trim()));
+            }
+
+            int distancia = recorrido[recorrido.Count - 1];
+
+            recorrido.RemoveAt(recorrido.Count - 1);
+
+            pintarNodos(panel2, recorrido);
+
+
+
         }
 
-        public void pintarNodos(Panel panel) {
+        public void pintarNodos(Panel panel, List<int> l) {
             Graphics g = panel.CreateGraphics();
-            Pen pen = new Pen(Color.Snow, 9);
-            Point A = new Point(50, 60);
-            Point B = new Point(177, 44);
-            Point C = new Point(135, 135);
-            Point D = new Point(272, 71);
-            Point E = new Point(305, 156);
-            Point F = new Point(448, 127);
-            Point G = new Point(376, 68);
-            Point H = new Point(552, 149);
-            Point I = new Point(47, 255);
-            Point J = new Point(217, 211);
-            Point K = new Point(286, 294);
-            Point L = new Point(394, 210);
-            Point M = new Point(451, 302);
-            Point N = new Point(522, 236);
-            Point O = new Point(138, 339);
+            Pen pen = new Pen(Color.Brown, 9);
 
-
-            //g.DrawRectangle(pen, 50, 60, 20, 20);
-
-            Point[] lw1 = { A,I,K, E};
-
-            g.DrawLines(pen, lw1);
+            List<Point> puntosDibujar = new List<Point>();
+            foreach (var i in l)
+            {
+                puntosDibujar.Add(puntos[i - 1]);
+            }
+            Point[] s = puntosDibujar.ToArray();
+            g.DrawLines(pen,s);
         }
 
         private void panel2_MouseClick(object sender, MouseEventArgs e)

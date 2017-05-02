@@ -88,17 +88,12 @@
             "B",
             "C",
             "D",
-            "E",
             "F",
             "G",
             "H",
             "I",
             "J",
-            "K",
-            "L",
-            "M",
-            "N",
-            "O"});
+            "K"});
             this.comboBox1.Location = new System.Drawing.Point(94, 76);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(141, 21);
@@ -106,7 +101,6 @@
             // 
             // panel2
             // 
-            this.panel2.BackgroundImage = global::PROLOG.UI.Properties.Resources.mapa;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Location = new System.Drawing.Point(326, 74);
             this.panel2.Name = "panel2";

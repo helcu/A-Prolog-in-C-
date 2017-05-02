@@ -63,9 +63,9 @@ namespace PROLOG.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap mapa {
+        internal static System.Drawing.Bitmap Captura {
             get {
-                object obj = ResourceManager.GetObject("mapa", resourceCulture);
+                object obj = ResourceManager.GetObject("Captura", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

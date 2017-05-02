@@ -48,6 +48,7 @@ dist_recta(11,5,15).
 % ----- Algoritmo ------
 
 % Devuelve todas las rutas asociadas
+cargar(A):-exists_file(A),consult(A).
 buscarRuta(Origen, Destino,Ruta):-
 	ciudad_id(C1,Origen),
 	ciudad_id(C2,Destino),

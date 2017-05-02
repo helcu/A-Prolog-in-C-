@@ -6,3 +6,4 @@ C:\Users\Usuario\documents\visual studio 2015\Projects\PROLOG\PROLOG.UI\obj\Debu
 C:\Users\Usuario\documents\visual studio 2015\Projects\PROLOG\PROLOG.UI\obj\Debug\PROLOG.UI.csproj.GenerateResource.Cache
 C:\Users\Usuario\documents\visual studio 2015\Projects\PROLOG\PROLOG.UI\obj\Debug\PROLOG.UI.exe
 C:\Users\Usuario\documents\visual studio 2015\Projects\PROLOG\PROLOG.UI\obj\Debug\PROLOG.UI.pdb
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\PROLOG\PROLOG.UI\obj\Debug\PROLOG.UI.csprojResolveAssemblyReference.cache
